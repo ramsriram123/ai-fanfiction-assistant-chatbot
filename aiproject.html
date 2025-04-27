@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Fan Fiction</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #00ffcc; }
+      100% { text-shadow: 0 0 20px #ff007a; }
+    }
+
+    .glow-text {
+      background: linear-gradient(45deg, #00ffcc, #ff007a);
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: glow 2s infinite alternate;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-white font-sans flex flex-col items-center justify-start px-6 py-10 space-y-12">
+
+  <!-- Header -->
+  <header class="text-center space-y-2">
+    <h1 class="text-5xl font-extrabold glow-text">AI Fan Fiction Assistant</h1>
+    <p class="text-gray-300 text-lg max-w-xl mx-auto">Unleash your imagination with AI-powered storytelling. Enter your fandom and let the magic unfold!</p>
+  </header>
+
+  <!-- Chatbot Section -->
+  <section class="w-full max-w-4xl bg-gray-800 bg-opacity-70 backdrop-blur-md rounded-xl p-6 shadow-lg">
+    <zapier-interfaces-chatbot-embed is-popup='false' chatbot-id='cm9v9llxr002gr8y6id85pfqd' height='600px' width='850px'></zapier-interfaces-chatbot-embed>
+
+  </section>
+
+  
+  <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+</body>
+</html>
